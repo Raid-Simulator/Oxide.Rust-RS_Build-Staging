@@ -1,0 +1,235 @@
+{
+  "Name": "Rust",
+  "TargetDirectory": "E:\\Oxide-Auto-Patcher\\RustServer\\RustDedicated_Data\\Managed",
+  "Manifests": [
+    {
+      "AssemblyName": "Assembly-CSharp.dll",
+      "Hooks": [
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 54,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 4,
+            "ArgumentString": "this, l0",
+            "HookTypeName": "Simple",
+            "Name": "OnSendRespawnOptions",
+            "HookName": "OnSendRespawnOptions",
+            "AssemblyName": "Assembly-CSharp.dll",
+            "TypeName": "BasePlayer",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "SendRespawnOptions",
+              "ReturnType": "System.Void",
+              "Parameters": []
+            },
+            "MSILHash": "+X7S1Mi9AOrUf/iOleQZqyxHM3+oMSx3x0qzsi9bRys=",
+            "BaseHookName": null,
+            "HookCategory": "Player"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 27,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 1,
+            "ArgumentString": null,
+            "HookTypeName": "Simple",
+            "Name": "OnConnectedPlayerUpdate",
+            "HookName": "OnConnectedPlayerUpdate",
+            "AssemblyName": "Assembly-CSharp.dll",
+            "TypeName": "BasePlayer",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 0,
+              "Name": "ConnectedPlayerUpdate",
+              "ReturnType": "System.Void",
+              "Parameters": [
+                "System.Single"
+              ]
+            },
+            "MSILHash": "JuQ9PrVs0SfF40rJad1hSAlhhOmmMiiIjWf2TGJgZqE=",
+            "BaseHookName": null,
+            "HookCategory": "Player"
+          }
+        },
+        {
+          "Type": "Modify",
+          "Hook": {
+            "InjectionIndex": 57,
+            "RemoveCount": 0,
+            "Instructions": [
+              {
+                "OpCode": "ldloc_1",
+                "OpType": "None",
+                "Operand": null
+              },
+              {
+                "OpCode": "ldarg_1",
+                "OpType": "None",
+                "Operand": null
+              },
+              {
+                "OpCode": "ldfld",
+                "OpType": "Field",
+                "Operand": "Assembly-CSharp|HitInfo|Initiator"
+              },
+              {
+                "OpCode": "stfld",
+                "OpType": "Field",
+                "Operand": "Assembly-CSharp|BaseEntity|creatorEntity"
+              }
+            ],
+            "HookTypeName": "Modify",
+            "Name": "ServerProjectileHit [patch] [IncinAmmo]",
+            "HookName": "OnServerProjectileHit",
+            "AssemblyName": "Assembly-CSharp.dll",
+            "TypeName": "ItemModProjectileSpawn",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "ServerProjectileHit",
+              "ReturnType": "System.Void",
+              "Parameters": [
+                "HitInfo"
+              ]
+            },
+            "MSILHash": "P3lJaa/5SVjMPKfkditqfsxIf2WQWF56hgjJjTg+AtQ=",
+            "BaseHookName": null,
+            "HookCategory": "_Patches"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 0,
+            "ReturnBehavior": 1,
+            "ArgumentBehavior": 1,
+            "ArgumentString": null,
+            "HookTypeName": "Simple",
+            "Name": "CanFireballSpread",
+            "HookName": "CanFireballSpread",
+            "AssemblyName": "Assembly-CSharp.dll",
+            "TypeName": "FireBall",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "TryToSpread",
+              "ReturnType": "System.Void",
+              "Parameters": []
+            },
+            "MSILHash": "EjfywcFTQxs51qMdS434ofi01UtVe6vsSB3Wsyjh/nY=",
+            "BaseHookName": null,
+            "HookCategory": "FireBall"
+          }
+        },
+        {
+          "Type": "Modify",
+          "Hook": {
+            "InjectionIndex": 0,
+            "RemoveCount": 10,
+            "Instructions": [],
+            "HookTypeName": "Modify",
+            "Name": "OnConnectedPlayerUpdate",
+            "HookName": "OnConnectedPlayerUpdate",
+            "AssemblyName": "Assembly-CSharp.dll",
+            "TypeName": "BasePlayer",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 0,
+              "Name": "ConnectedPlayerUpdate",
+              "ReturnType": "System.Void",
+              "Parameters": [
+                "System.Single"
+              ]
+            },
+            "MSILHash": "JuQ9PrVs0SfF40rJad1hSAlhhOmmMiiIjWf2TGJgZqE=",
+            "BaseHookName": null,
+            "HookCategory": "Player"
+          }
+        }
+      ],
+      "Modifiers": [
+        {
+          "Name": "SpawnHandler::CharDistribution",
+          "AssemblyName": "Assembly-CSharp.dll",
+          "TypeName": "SpawnHandler",
+          "Type": 0,
+          "TargetExposure": [
+            2
+          ],
+          "Flagged": false,
+          "Signature": {
+            "Exposure": [
+              3
+            ],
+            "Name": "CharDistribution",
+            "FullTypeName": "SpawnDistribution SpawnHandler::CharDistribution",
+            "Parameters": []
+          },
+          "MSILHash": ""
+        },
+        {
+          "Name": "BasePlayer::networkQueue",
+          "AssemblyName": "Assembly-CSharp.dll",
+          "TypeName": "BasePlayer",
+          "Type": 0,
+          "TargetExposure": [
+            2
+          ],
+          "Flagged": false,
+          "Signature": {
+            "Exposure": [
+              0
+            ],
+            "Name": "networkQueue",
+            "FullTypeName": "BasePlayer/NetworkQueueList[] BasePlayer::networkQueue",
+            "Parameters": []
+          },
+          "MSILHash": ""
+        },
+        {
+          "Name": "BasePlayer/NetworkQueueList",
+          "AssemblyName": "Assembly-CSharp.dll",
+          "TypeName": "BasePlayer/NetworkQueueList",
+          "Type": 3,
+          "TargetExposure": [
+            2
+          ],
+          "Flagged": false,
+          "Signature": {
+            "Exposure": [
+              0
+            ],
+            "Name": "NetworkQueueList",
+            "FullTypeName": "BasePlayer/NetworkQueueList",
+            "Parameters": []
+          },
+          "MSILHash": ""
+        },
+        {
+          "Name": "BasePlayer::SnapshotQueue",
+          "AssemblyName": "Assembly-CSharp.dll",
+          "TypeName": "BasePlayer",
+          "Type": 0,
+          "TargetExposure": [
+            2
+          ],
+          "Flagged": false,
+          "Signature": {
+            "Exposure": [
+              0
+            ],
+            "Name": "SnapshotQueue",
+            "FullTypeName": "BasePlayer/NetworkQueueList BasePlayer::SnapshotQueue",
+            "Parameters": []
+          },
+          "MSILHash": ""
+        }
+      ],
+      "Fields": []
+    }
+  ]
+}
