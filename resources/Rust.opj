@@ -170,6 +170,11 @@
                 "OpCode": "call",
                 "OpType": "Method",
                 "Operand": "Oxide.Core|Oxide.Core.Interface|CallHook"
+              },
+              {
+                "OpCode": "pop",
+                "OpType": "None",
+                "Operand": null
               }
             ],
             "HookTypeName": "Modify",
