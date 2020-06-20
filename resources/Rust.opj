@@ -126,31 +126,6 @@
           }
         },
         {
-          "Type": "Modify",
-          "Hook": {
-            "InjectionIndex": 0,
-            "RemoveCount": 10,
-            "Instructions": [],
-            "HookTypeName": "Modify",
-            "Name": "OnConnectedPlayerUpdate",
-            "HookName": "OnConnectedPlayerUpdate",
-            "AssemblyName": "Assembly-CSharp.dll",
-            "TypeName": "BasePlayer",
-            "Flagged": false,
-            "Signature": {
-              "Exposure": 0,
-              "Name": "ConnectedPlayerUpdate",
-              "ReturnType": "System.Void",
-              "Parameters": [
-                "System.Single"
-              ]
-            },
-            "MSILHash": "JuQ9PrVs0SfF40rJad1hSAlhhOmmMiiIjWf2TGJgZqE=",
-            "BaseHookName": null,
-            "HookCategory": "Player"
-          }
-        },
-        {
           "Type": "Simple",
           "Hook": {
             "InjectionIndex": 52,
